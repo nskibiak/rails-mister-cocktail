@@ -4,7 +4,8 @@
 <h2>Ingredients</h2>
 
 <% @cocktail.doses.each do |dose| %>
-[<%= dose.ingredient.name %> | <%= dose.description %>]
+  [<%= dose.ingredient.name %> | <%= dose.description %>] |
+  <%= link_to "Delete", cocktail_dose_path(@cocktail, dose), method: :delete, data: { confirm: 'Are you sure?' } %>
 <% end %>
 
 <hr>
