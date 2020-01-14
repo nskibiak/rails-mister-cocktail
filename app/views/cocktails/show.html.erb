@@ -1,5 +1,6 @@
 <h1><%= @cocktail.name %></h1>
 
+<%= image_tag @cocktail.image, alt: "Cuba Libre", width: "200px" %>
 <h2>Ingredients</h2>
 
 <% @cocktail.doses.each do |dose| %>
