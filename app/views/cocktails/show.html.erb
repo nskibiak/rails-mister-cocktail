@@ -1,7 +1,12 @@
 <h1><%= @cocktail.name %></h1>
 
 <%= image_tag @cocktail.image, alt: "Cuba Libre", width: "200px" %>
-<h5 style="font-weight: bold">INGREDIENTS</h5 style="font-weight: bold">
+
+<h5 style="font-weight: bold">DIRECTIONS</h5>
+
+<p><%= @cocktail.directions %></p>
+
+<h5 style="font-weight: bold">INGREDIENTS</h5>
 
 <% @cocktail.doses.each do |dose| %>
   <ul>
