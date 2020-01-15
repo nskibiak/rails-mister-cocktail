@@ -1,9 +1,16 @@
 <h1>Cocktails#index</h1>
-
-<% @cocktails.each do |cocktail| %>
-<ul>
-  <li><%= cocktail.name %> | <%= link_to "See details", cocktail_path(cocktail) %></li>
-</ul>
-<% end %>
+  <div class="container">
+    <% @cocktails.each do |cocktail| %>
+      <div class="card" style="width: 18rem;">
+        <img src="<%= cocktail.image %>" class="card-img-top" alt="<%= cocktail.name %>">
+        <div class="card-body">
+          <h5 class="card-title"><%= cocktail.name %></h5>
+          <p class="card-text"><%= cocktail.directions[0..60] %>...</p>
+          <%= link_to "See details", cocktail_path(cocktail), { class: "btn btn-primary" } %>
+        </div>
+      </div>
+    <% end %>
+  </div>
 <hr>
-<%= link_to "Add a cocktail", new_cocktail_path, { class: "btn btn-primary" } %>
+<%= link_to "Add a cocktail!", new_cocktail_path, { class: "btn btn-primary" } %>
+
