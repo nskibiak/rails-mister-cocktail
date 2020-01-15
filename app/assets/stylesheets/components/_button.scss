@@ -1,0 +1,25 @@
+.add-button-container{
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 45vh;
+  right: 3rem;
+  align-items: center;
+}
+
+.add-button-container-header {
+  font-family: Oswald;
+  color: #50a013;
+  margin-bottom: .5em;
+}
+
+.add-button{
+  background-color: $blue;
+  // font-size: 1.5em;
+  color: white;
+  height: 50px;
+  width: 50px;
+  padding: 15px;
+  border-radius: 50%;
+  box-shadow: 5px 5px 20px 5px rgba(143,143,143,0.5);
+}
