@@ -4,7 +4,7 @@
 
   <div class="container" id="drinks-menu">
     <% @cocktails.each do |cocktail| %>
-      <div class="card" style="width: 16rem;">
+      <div class="card bg-light" style="width: 16rem;">
         <img src="<%= cocktail.image %>" class="card-img-top" alt="<%= cocktail.name %>">
         <div class="card-body">
           <h5 class="card-title"><%= cocktail.name %></h5>
