@@ -7,3 +7,6 @@
   <%= f.association :ingredient %>
   <%= f.submit "add a dose", class: "btn btn-primary" %>
 <% end %>
+
+<hr>
+<%= link_to "Back to #{@cocktail.name}", cocktail_path(@cocktail) %>
