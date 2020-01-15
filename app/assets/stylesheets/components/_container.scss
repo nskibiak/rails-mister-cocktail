@@ -1,5 +1,14 @@
-#drinks-menu {
+#cocktails {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+}
+
+#cocktail {
+  height: 100vh;
+  display: flex;
+  // margin-left: auto;
+  // margin-right: auto;
+  justify-content: center;
+  align-items: center;
 }
