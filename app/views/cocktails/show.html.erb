@@ -1,12 +1,18 @@
 <h1><%= @cocktail.name %></h1>
 
 <%= image_tag @cocktail.image, alt: "Cuba Libre", width: "200px" %>
-<h2>Ingredients</h2>
+<h5 style="font-weight: bold">INGREDIENTS</h5 style="font-weight: bold">
 
 <% @cocktail.doses.each do |dose| %>
-  [<%= dose.ingredient.name %> | <%= dose.description %>] |
-  <%= link_to "Delete", cocktail_dose_path(@cocktail, dose), method: :delete, data: { confirm: 'Are you sure?' } %>
+  <ul>
+    <li>
+      <%= dose.ingredient.name %> | <%= dose.description %> |
+      <%= link_to "Delete", cocktail_dose_path(@cocktail, dose), method: :delete, data: { confirm: 'Are you sure?' } %>
+    </li>
+  </ul>
+
 <% end %>
 
 <hr>
-<%= link_to "Add a Dose", new_cocktail_dose_path(@cocktail) %>
+<%= link_to "Add a Dose", new_cocktail_dose_path(@cocktail) %> |
+<%= link_to "Back to cocktails", cocktails_path %>
