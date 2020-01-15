@@ -16,10 +16,11 @@
                       <ul>
                         <li>
                           <%= dose.ingredient.name %> | <%= dose.description %> |
-                          <%= link_to "Delete", cocktail_dose_path(@cocktail, dose), method: :delete, data: { confirm: 'Are you sure?' } %>
+                          <%= link_to "<i class='fas fa-minus-circle'></i>".html_safe, cocktail_dose_path(@cocktail, dose), method: :delete, data: { confirm: 'Are you sure?' }, style: "color:red" %>
                         </li>
                       </ul>
                     <% end %>
+                    <%= link_to "<i class='fas fa-plus-circle'></i> Add ingredient".html_safe, new_cocktail_dose_path(@cocktail), { class: "btn-outline-primary btn-sm" } %>
                 </div>
                 <div class="directions">
                   <h5 style="font-weight: bold">DIRECTIONS</h5>
@@ -30,9 +31,8 @@
         </div>
       </div>
     </div>
+<hr>
+<%= link_to "Back to cocktails", cocktails_path, { class: "btn btn-primary" } %>
 
 </div>
 
-<hr>
-<%= link_to "Add a Dose", new_cocktail_dose_path(@cocktail), { class: "btn btn-primary" } %> |
-<%= link_to "Back to cocktails", cocktails_path, { class: "btn btn-primary" } %>
