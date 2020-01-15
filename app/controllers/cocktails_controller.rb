@@ -1,7 +1,7 @@
 class CocktailsController < ApplicationController
   def index
-    @cocktails = Cocktail.all
-    @ingredients = Ingredient.all
+    @cocktails = Cocktail.search(params[:search])
+    # @cocktails = Cocktail.all
   end
 
   def show

@@ -1,16 +1,18 @@
-.navbar-lewagon {
+.navbar {
   justify-content: space-between;
   background: white;
+  background-color: transparent;
+  transition: 0.5s background-color ease;
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar-white {
+  background-color: white;
+}
+
+.navbar .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
-}
-
-.navbar-brand {
+.navbar .navbar-brand {
   font-family: Oswald;
 }
