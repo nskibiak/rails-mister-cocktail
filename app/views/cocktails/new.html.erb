@@ -3,8 +3,8 @@
 
 <%= simple_form_for @cocktail do |f| %>
   <%= f.input :name %>
-  <%= f.input :image %>
-  <%= f.submit "add a cocktail", class: "btn btn-primary" %>
+  <%= f.input :image, "test" %>
+  <%= f.submit "Add cocktail", class: "btn btn-primary" %>
 <% end %>
 <hr>
-<%= link_to "Back to cocktails", cocktails_path %>
+<%= link_to "Back to cocktails", cocktails_path, { class: "btn btn-primary" } %>
