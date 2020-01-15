@@ -2,8 +2,9 @@
 <p>Find me in app/views/cocktails/new.html.erb</p>
 
 <%= simple_form_for @cocktail do |f| %>
-  <%= f.input :name %>
-  <%= f.input :image, "test" %>
+  <%= f.input :name, :label => "Cocktail name" %>
+  <%= f.input :directions, as: :string %>
+  <%= f.input :image, :label => "Image URL (optional)"%>
   <%= f.submit "Add cocktail", class: "btn btn-primary" %>
 <% end %>
 <hr>
