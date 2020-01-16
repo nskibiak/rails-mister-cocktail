@@ -2,8 +2,11 @@ class CocktailsController < ApplicationController
   before_action :generic
 
   def index
-    @cocktails = Cocktail.search(params[:search])
-    # @cocktails = Cocktail.all
+    if params[:keyword]
+      @cocktails = Cocktail.where(name:params[:keyword])
+    else
+      @cocktails = Cocktail.all
+    end
   end
 
   def show
