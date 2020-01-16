@@ -1,12 +1,23 @@
-<h1><%= @cocktail.name %></h1>
-<h2>Add a new dose @ Doses#new</h2>
-<p>Find me in app/views/doses/new.html.erb</p>
+<div class="container" id="cocktail-new">
 
-<%= simple_form_for [@cocktail, @dose] do |f| %>
-  <%= f.input :description %>
-  <%= f.association :ingredient %>
-  <%= f.submit "add a dose", class: "btn btn-primary" %>
-<% end %>
+  <div id="cocktail-new-left">
+    <%= link_to "<i class='fas fa-arrow-circle-left'></i>".html_safe, cocktail_path(@cocktail), { class: "btn btn-primary"} %>
+  </div>
+    <div id="cocktail-new-middle">
+      <div class="card bg-light" style="width: 24rem;">
+        <img src="https://i.ytimg.com/vi/KhgV2AJDIfU/maxresdefault.jpg" class="card-img-top-new" alt="Cocktail shaker">
+          <div class="card-body">
+            <%= simple_form_for [@cocktail, @dose] do |f| %>
+              <%= f.association :ingredient %>
+              <%= f.input :description, :label => "Quantity" %>
+              <%= f.submit "Add", { class: "btn btn-primary btn-sm" } do %>
+                <i class='fas fa-plus-circle'></i>
+              <% end %>
+            <% end %>
+          </div>
+      </div>
+    </div>
+  <div id="cocktail-new-right"></div>
+</div>
 
-<hr>
-<%= link_to "Back to #{@cocktail.name}", cocktail_path(@cocktail) %>
+
