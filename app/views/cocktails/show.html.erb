@@ -23,7 +23,7 @@
                     <%= link_to "<i class='fas fa-plus-circle'></i> Add ingredient".html_safe, new_cocktail_dose_path(@cocktail), { class: "btn-outline-primary btn-sm" } %>
                 </div>
                 <div class="directions">
-                  <h5 style="font-weight: bold">DIRECTIONS</h5>
+                  <h5 style="font-weight: bold">INSTRUCTIONS</h5>
                   <p class="card-text"><%= @cocktail.directions %></p>
                 </div>
               </div>
@@ -32,7 +32,7 @@
       </div>
     </div>
 <hr>
-<%= link_to "Back to cocktails", cocktails_path, { class: "btn btn-primary" } %>
+<%= link_to "<i class='fas fa-arrow-circle-left'></i> &nbspBack to cocktails".html_safe, cocktails_path, { class: "btn btn-primary" } %>
 
 </div>
 

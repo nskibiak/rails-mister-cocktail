@@ -12,6 +12,14 @@
   object-fit: cover;
 }
 
+.card-img-top-new {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  width: 100%;
+  // height: 15vw;
+  // object-fit: cover;
+}
+
 .card-img {
   border-top-left-radius: 15px;
   border-bottom-left-radius: 15px;

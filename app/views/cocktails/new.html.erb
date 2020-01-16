@@ -1,11 +1,24 @@
-<h1>Cocktails#new</h1>
-<p>Find me in app/views/cocktails/new.html.erb</p>
+<div class="container" id="cocktail-new">
 
-<%= simple_form_for @cocktail do |f| %>
-  <%= f.input :name, :label => "Cocktail name" %>
-  <%= f.input :directions, as: :string %>
-  <%= f.input :image, :label => "Image URL (optional)"%>
-  <%= f.submit "Add cocktail", class: "btn btn-primary" %>
-<% end %>
-<hr>
-<%= link_to "Back to cocktails", cocktails_path, { class: "btn btn-primary" } %>
+  <div id="cocktail-new-left">
+    <%= link_to "<i class='fas fa-arrow-circle-left'></i>".html_safe, cocktails_path, { class: "btn btn-primary"} %>
+  </div>
+    <div id="cocktail-new-middle">
+      <div class="card bg-light" style="width: 24rem;">
+        <img src="https://www.muddlebox.com/wp-content/uploads/2018/11/3355-Mezclar-Piccolo-Shaker-Lifestyle-2.jpg" class="card-img-top-new" alt="Cocktail shaker">
+          <div class="card-body">
+            <%= simple_form_for @cocktail do |f| %>
+              <%= f.input :name, :label => "Name", placeholder: 'Gin and tonic' %>
+              <%= f.input :directions, :label => "Instructions", placeholder: 'Mix the booze and mixers...' %>
+              <%= f.input :image, :label => "Image URL (optional)"%>
+              <%= f.submit "Add", { class: "btn btn-primary btn-sm" } do %>
+                <i class='fas fa-plus-circle'></i>
+              <% end %>
+            <% end %>
+          </div>
+      </div>
+    </div>
+  <div id="cocktail-new-right"></div>
+</div>
+
+
