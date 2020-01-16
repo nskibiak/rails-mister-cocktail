@@ -10,6 +10,8 @@ require("channels")
 
 import 'bootstrap';
 
+import { initUpdateNavbarOnScroll } from '../components/navbar';
+
 $(document).ready(function(){
 
   $('#arrow').click(function(){
@@ -18,6 +20,8 @@ $(document).ready(function(){
    });
 
 });
+
+initUpdateNavbarOnScroll();
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
