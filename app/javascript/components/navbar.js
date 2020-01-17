@@ -1,4 +1,5 @@
 const initUpdateNavbarOnScroll = () => {
+  console.log("in the function");
   const navbar = document.querySelector('.navbar');
   if (navbar) {
     window.addEventListener('scroll', () => {

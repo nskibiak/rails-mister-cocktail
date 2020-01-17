@@ -4,7 +4,7 @@
     <%= link_to "<i class='fas fa-arrow-circle-left'></i>".html_safe, cocktail_path(@cocktail), { class: "btn btn-primary"} %>
   </div>
     <div id="cocktail-new-middle">
-      <div class="card bg-light" style="width: 24rem;">
+      <div class="card-new bg-light" style="width: 24rem;">
         <img src="https://i.ytimg.com/vi/KhgV2AJDIfU/maxresdefault.jpg" class="card-img-top-new" alt="Cocktail shaker">
           <div class="card-body">
             <%= simple_form_for [@cocktail, @dose] do |f| %>
