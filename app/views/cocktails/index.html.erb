@@ -9,7 +9,13 @@
   <div class="container" id="cocktails">
     <% @cocktails.each do |cocktail| %>
       <div class="card bg-light" style="width: 16rem;">
-        <img src="<%= cocktail.image.empty? ? @generic : cocktail.image %>" class="card-img-top" alt="<%= cocktail.name %>">
+
+        <% if cocktail.photo.attached? %>
+          <%= cl_image_tag cocktail.photo.key, class: "card-img-top" %>
+        <% else %>
+          <img src="<%= cocktail.image.empty? ? @generic : cocktail.image %>" class="card-img-top" alt="<%= cocktail.name %>">
+        <% end %>
+
         <div class="card-body">
           <h5 class="card-title"><%= cocktail.name %></h5>
           <p class="card-text"><%= cocktail.directions[0..70] %>...</p>
