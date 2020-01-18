@@ -133,6 +133,8 @@ Cocktail.create!([
 ])
 
 puts 'Mixing recipes...'
+puts "There are now #{Ingredient.all.count} ingredients..."
+puts "There are now #{Cocktail.all.count} cocktails..."
 
 Dose.create!([
   {description: "5 oz.", cocktail_id: 1, ingredient_id: 28},
