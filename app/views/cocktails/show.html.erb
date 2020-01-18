@@ -3,7 +3,11 @@
     <div class="card mb-3" style="max-width: 70vw">
       <div class="row no-gutters">
         <div class="col-md-4">
-          <img src="<%= @cocktail.image.empty? ? @generic : @cocktail.image %>" class="card-img" alt="<%= @cocktail.name %>">
+          <% if @cocktail.photo.attached? %>
+            <%= cl_image_tag @cocktail.photo.key, class: "card-img-top" %>
+          <% else %>
+            <img src="<%= @cocktail.image.empty? ? @generic : @cocktail.image %>" class="card-img-top" alt="<%= @cocktail.name %>">
+          <% end %>
         </div>
         <div class="col-md-8">
           <div class="card-body">
