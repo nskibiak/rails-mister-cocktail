@@ -4,9 +4,9 @@
       <div class="row no-gutters">
         <div class="col-md-4">
           <% if @cocktail.photo.attached? %>
-            <%= cl_image_tag @cocktail.photo.key, class: "card-img-top" %>
+            <%= cl_image_tag @cocktail.photo.key, class: "card-img" %>
           <% else %>
-            <img src="<%= @cocktail.image.empty? ? @generic : @cocktail.image %>" class="card-img-top" alt="<%= @cocktail.name %>">
+            <img src="<%= @cocktail.image.empty? ? @generic : @cocktail.image %>" class="card-img" alt="<%= @cocktail.name %>">
           <% end %>
         </div>
         <div class="col-md-8">
