@@ -11,6 +11,7 @@
               <%= f.input :name, :label => "Name", placeholder: 'Gin and tonic' %>
               <%= f.input :directions, :label => "Instructions", placeholder: 'Mix the booze and mixers...' %>
               <%= f.input :image, :label => "Image URL (optional)"%>
+              <%= f.input :photo, as: :file, :label => "Attach image file (optional)" %>
               <%= f.submit "Add", { class: "btn btn-primary btn-sm" } do %>
                 <i class='fas fa-plus-circle'></i>
               <% end %>

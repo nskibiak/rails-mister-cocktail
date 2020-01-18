@@ -1,4 +1,5 @@
 class Cocktail < ApplicationRecord
+  has_one_attached :photo
   # include PgSearch
 
   has_many :doses, dependent: :destroy
